@@ -80,6 +80,8 @@ describe("INTERNAL -- streamHtml", function()
 		{
 			expect(error).to.be.an.instanceOf(Error);
 			expect(error.message).to.equal( messages.errors.EXPECTED_HTML("image/gif") );
+			expect(error.code).to.equal("BLC_NON_HTML");
+			expect(error.contentType).to.equal("image/gif");
 		})
 		.then( function()
 		{
@@ -106,6 +108,8 @@ describe("INTERNAL -- streamHtml", function()
 		{
 			expect(error).to.be.an.instanceOf(Error);
 			expect(error.message).to.equal( messages.errors.EXPECTED_HTML(undefined) );
+			expect(error.code).to.equal("BLC_NON_HTML");
+			expect(error.contentType).to.equal(undefined);
 		})
 		.then( function()
 		{
