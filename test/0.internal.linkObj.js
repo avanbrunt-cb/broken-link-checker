@@ -102,7 +102,7 @@ describe("INTERNAL -- linkObj", function()
 			code += '	linkObj.resolve(link, baseUrl, options);\n';
 			code += '	\n';
 			code += '	expect(link.url.original).to.equal(linkUrl);\n';
-			code += '	expect(link.url.resolved).to.equal('+helpers.format(data.resolvedLinkUrl)+');\n';
+			code += '\texpect(link.url.resolved).to.equal('+helpers.format(data.resolvedLinkUrl)+');\n';
 			code += '	\n';
 			code += '	expect(link.base.original).to.equal(baseUrl);\n';
 			code += '	expect(link.base.resolved).to.equal('+helpers.format(data.resolvedBaseUrl)+');\n';

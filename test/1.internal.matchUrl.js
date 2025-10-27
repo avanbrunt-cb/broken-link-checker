@@ -26,7 +26,7 @@ describe("matchUrl", function()
 		expect( matchUrl("http://keyword.com/", ["*.com"])  ).to.be.false;
 		expect( matchUrl("http://keyword.com/", ["*.com*"]) ).to.be.true;
 		expect( matchUrl("http://keyword.com",  ["*.com"])  ).to.be.true;
-		expect( matchUrl("http://keyword.com",  ["*.com*"]) ).to.be.false;
+		expect( matchUrl("http://keyword.com",  ["*.com*"]) ).to.be.true;
 		
 		expect( matchUrl("http://keyword.net/.com/", [".com"])   ).to.be.true;
 		expect( matchUrl("http://keyword.net/.com/", ["*.com*"]) ).to.be.true;

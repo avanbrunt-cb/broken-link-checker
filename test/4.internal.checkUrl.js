@@ -27,9 +27,6 @@ describe("INTERNAL -- checkUrl", function()
 	{
 		return helpers.stopConnections(conn.realPorts);
 	});
-	
-	
-	
 	it("resolves a promise", function()
 	{
 		return checkUrl(
